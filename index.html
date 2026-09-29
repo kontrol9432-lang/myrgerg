@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -5,645 +6,427 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>FoodGo — доставка еды</title>
-    <meta
-        name="description"
-        content="FoodGo — быстрая доставка вкусной еды прямо к вам домой."
-    >
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ================= HEADER ================= -->
+<header class="header">
+    <div class="container nav">
 
-    <header class="header">
+        <a href="#" class="logo">
+            🍔 Food<span>Go</span>
+        </a>
 
-        <div class="container nav">
+        <nav class="menu">
+            <a href="#home">Главная</a>
+            <a href="#menu">Меню</a>
+            <a href="#about">О нас</a>
+        </nav>
 
-            <a href="#" class="logo">
-                🍔 Food<span>Go</span>
-            </a>
+        <button class="cart-button" id="cartButton">
+            🛒 <span id="cartCount">0</span>
+        </button>
 
-            <nav class="menu">
-                <a href="#home">Главная</a>
-                <a href="#categories">Категории</a>
-                <a href="#popular">Популярное</a>
-                <a href="#about">О нас</a>
-            </nav>
+        <button class="menu-button" id="menuButton">
+            ☰
+        </button>
 
-            <button class="cart-button" id="cartButton">
-                🛒
-                <span id="cartCount">0</span>
-            </button>
-
-            <button class="menu-button" id="menuButton">
-                ☰
-            </button>
-
-        </div>
-
-    </header>
+    </div>
+</header>
 
 
-    <main>
+<main>
 
-        <!-- ================= HERO ================= -->
+    <!-- Главный экран -->
 
-        <section class="hero" id="home">
+    <section class="hero" id="home">
 
-            <div class="container hero-content">
+        <div class="container hero-content">
 
-                <div class="hero-text">
+            <div class="hero-text">
 
-                    <div class="badge">
-                        🔥 Доставка от 30 минут
-                    </div>
-
-                    <h1>
-                        Вкусная еда
-                        <span>прямо к двери</span>
-                    </h1>
-
-                    <p>
-                        Заказывай любимые блюда из лучших ресторанов
-                        своего города. Быстро, удобно и без лишних звонков.
-                    </p>
-
-                    <div class="hero-buttons">
-
-                        <a href="#popular" class="button primary">
-                            Заказать еду
-                        </a>
-
-                        <a href="#categories" class="button secondary">
-                            Смотреть меню
-                        </a>
-
-                    </div>
-
-                    <div class="hero-info">
-
-                        <div>
-                            <strong>30 мин</strong>
-                            <span>средняя доставка</span>
-                        </div>
-
-                        <div>
-                            <strong>4.9 ★</strong>
-                            <span>рейтинг сервиса</span>
-                        </div>
-
-                        <div>
-                            <strong>100+</strong>
-                            <span>блюд в меню</span>
-                        </div>
-
-                    </div>
-
+                <div class="badge">
+                    🔥 Доставка от 30 минут
                 </div>
 
+                <h1>
+                    Вкусная еда
+                    <span>прямо к двери</span>
+                </h1>
 
-                <div class="hero-food">
+                <p>
+                    Заказывай любимые блюда из лучших ресторанов
+                    и получай их быстро и удобно.
+                </p>
 
-                    <div class="food-glow"></div>
+                <div class="buttons">
 
-                    <div class="food-circle">
+                    <a href="#menu" class="button primary">
+                        Заказать еду
+                    </a>
 
-                        <div class="food-emoji">
-                            🍕
-                        </div>
-
-                    </div>
-
-                    <div class="floating-price">
-                        <span>🔥 Хит дня</span>
-                        <strong>от 1 990 ₸</strong>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= CATEGORIES ================= -->
-
-        <section class="categories" id="categories">
-
-            <div class="container">
-
-                <div class="section-title">
-
-                    <span>КАТЕГОРИИ</span>
-
-                    <h2>
-                        Что будем заказывать?
-                    </h2>
-
-                    <p>
-                        Выбери любимую категорию и найди
-                        что-нибудь вкусное.
-                    </p>
-
-                </div>
-
-
-                <div class="category-grid">
-
-                    <button class="category-card">
-                        <div>🍕</div>
-                        <span>Пицца</span>
-                    </button>
-
-                    <button class="category-card">
-                        <div>🍔</div>
-                        <span>Бургеры</span>
-                    </button>
-
-                    <button class="category-card">
-                        <div>🍣</div>
-                        <span>Суши</span>
-                    </button>
-
-                    <button class="category-card">
-                        <div>🍜</div>
-                        <span>Азиатская</span>
-                    </button>
-
-                    <button class="category-card">
-                        <div>🌮</div>
-                        <span>Мексиканская</span>
-                    </button>
-
-                    <button class="category-card">
-                        <div>🍰</div>
-                        <span>Десерты</span>
-                    </button>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= POPULAR ================= -->
-
-        <section class="popular" id="popular">
-
-            <div class="container">
-
-                <div class="section-heading">
-
-                    <div>
-                        <span>ПОПУЛЯРНОЕ</span>
-
-                        <h2>
-                            Любят наши клиенты
-                        </h2>
-                    </div>
-
-                    <a href="#" class="view-all">
-                        Смотреть всё →
+                    <a href="#about" class="button secondary">
+                        Узнать больше
                     </a>
 
                 </div>
 
-
-                <div class="food-grid">
-
-                    <!-- CARD 1 -->
-
-                    <article class="food-card">
-
-                        <div class="food-image pizza">
-                            🍕
-                            <span class="food-tag">
-                                Хит
-                            </span>
-                        </div>
-
-                        <div class="food-content">
-
-                            <div class="food-title">
-                                <h3>
-                                    Пепперони
-                                </h3>
-
-                                <span class="rating">
-                                    ★ 4.9
-                                </span>
-                            </div>
-
-                            <p>
-                                Пицца с пепперони, моцареллой
-                                и фирменным соусом.
-                            </p>
-
-                            <div class="food-bottom">
-
-                                <strong>
-                                    2 990 ₸
-                                </strong>
-
-                                <button
-                                    class="add-button"
-                                    data-name="Пепперони"
-                                    data-price="2990"
-                                >
-                                    +
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- CARD 2 -->
-
-                    <article class="food-card">
-
-                        <div class="food-image burger">
-                            🍔
-                            <span class="food-tag new">
-                                Новинка
-                            </span>
-                        </div>
-
-                        <div class="food-content">
-
-                            <div class="food-title">
-
-                                <h3>
-                                    Double Burger
-                                </h3>
-
-                                <span class="rating">
-                                    ★ 4.8
-                                </span>
-
-                            </div>
-
-                            <p>
-                                Две сочные котлеты, сыр,
-                                салат и фирменный соус.
-                            </p>
-
-                            <div class="food-bottom">
-
-                                <strong>
-                                    2 490 ₸
-                                </strong>
-
-                                <button
-                                    class="add-button"
-                                    data-name="Double Burger"
-                                    data-price="2490"
-                                >
-                                    +
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- CARD 3 -->
-
-                    <article class="food-card">
-
-                        <div class="food-image sushi">
-                            🍣
-                        </div>
-
-                        <div class="food-content">
-
-                            <div class="food-title">
-
-                                <h3>
-                                    Sushi Mix
-                                </h3>
-
-                                <span class="rating">
-                                    ★ 4.9
-                                </span>
-
-                            </div>
-
-                            <p>
-                                Ассорти из популярных роллов
-                                для идеального вечера.
-                            </p>
-
-                            <div class="food-bottom">
-
-                                <strong>
-                                    4 490 ₸
-                                </strong>
-
-                                <button
-                                    class="add-button"
-                                    data-name="Sushi Mix"
-                                    data-price="4490"
-                                >
-                                    +
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- CARD 4 -->
-
-                    <article class="food-card">
-
-                        <div class="food-image noodles">
-                            🍜
-                        </div>
-
-                        <div class="food-content">
-
-                            <div class="food-title">
-
-                                <h3>
-                                    Wok с курицей
-                                </h3>
-
-                                <span class="rating">
-                                    ★ 4.7
-                                </span>
-
-                            </div>
-
-                            <p>
-                                Лапша удон с курицей,
-                                овощами и соусом терияки.
-                            </p>
-
-                            <div class="food-bottom">
-
-                                <strong>
-                                    2 190 ₸
-                                </strong>
-
-                                <button
-                                    class="add-button"
-                                    data-name="Wok с курицей"
-                                    data-price="2190"
-                                >
-                                    +
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
             </div>
 
-        </section>
 
+            <div class="hero-food">
 
-        <!-- ================= PROMO ================= -->
-
-        <section class="promo">
-
-            <div class="container">
-
-                <div class="promo-box">
-
-                    <div>
-
-                        <span>
-                            🎁 ПОДАРОК НОВЫМ КЛИЕНТАМ
-                        </span>
-
-                        <h2>
-                            Скидка 20% на первый заказ
-                        </h2>
-
-                        <p>
-                            Используй промокод
-                            <strong>FOODGO20</strong>
-                        </p>
-
-                    </div>
-
-                    <button class="button primary">
-                        Забрать скидку
-                    </button>
-
+                <div class="food-circle">
+                    🍕
                 </div>
 
-            </div>
-
-        </section>
-
-
-        <!-- ================= ABOUT ================= -->
-
-        <section class="about" id="about">
-
-            <div class="container about-grid">
-
-                <div class="about-visual">
-
-                    <div class="delivery-card">
-
-                        <div class="delivery-icon">
-                            🛵
-                        </div>
-
-                        <h3>
-                            Ваш заказ уже в пути!
-                        </h3>
-
-                        <div class="progress">
-
-                            <div class="progress-line">
-                                <span></span>
-                            </div>
-
-                            <div class="progress-info">
-                                <span>Ресторан</span>
-                                <span>В пути</span>
-                                <span>У вас</span>
-                            </div>
-
-                        </div>
-
-                    </div>
-
+                <div class="price-card">
+                    🔥 Хит дня
+                    <strong>от 1 990 ₸</strong>
                 </div>
-
-
-                <div class="about-text">
-
-                    <span class="section-label">
-                        ПОЧЕМУ FOODGO?
-                    </span>
-
-                    <h2>
-                        Еда должна приезжать вовремя.
-                    </h2>
-
-                    <p>
-                        Мы объединяем рестораны, курьеров и
-                        клиентов в одном удобном сервисе.
-                    </p>
-
-                    <div class="advantages">
-
-                        <div>
-                            <span>✓</span>
-                            <p>
-                                Быстрая доставка
-                            </p>
-                        </div>
-
-                        <div>
-                            <span>✓</span>
-                            <p>
-                                Проверенные рестораны
-                            </p>
-                        </div>
-
-                        <div>
-                            <span>✓</span>
-                            <p>
-                                Безопасная оплата
-                            </p>
-                        </div>
-
-                        <div>
-                            <span>✓</span>
-                            <p>
-                                Поддержка 24/7
-                            </p>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- ================= CART ================= -->
-
-    <div class="cart-overlay" id="cartOverlay">
-
-        <div class="cart">
-
-            <div class="cart-header">
-
-                <h2>
-                    Ваша корзина
-                </h2>
-
-                <button id="closeCart">
-                    ×
-                </button>
-
-            </div>
-
-            <div class="cart-items" id="cartItems">
-
-                <p class="empty-cart">
-                    Корзина пока пуста 🍕
-                </p>
-
-            </div>
-
-            <div class="cart-footer">
-
-                <div class="total">
-
-                    <span>
-                        Итого:
-                    </span>
-
-                    <strong id="cartTotal">
-                        0 ₸
-                    </strong>
-
-                </div>
-
-                <button class="button primary checkout">
-                    Оформить заказ
-                </button>
 
             </div>
 
         </div>
 
-    </div>
+    </section>
 
 
-    <!-- ================= FOOTER ================= -->
+    <!-- Категории -->
 
-    <footer class="footer">
+    <section class="categories">
 
-        <div class="container footer-content">
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>КАТЕГОРИИ</span>
+
+                <h2>
+                    Что будем заказывать?
+                </h2>
+
+            </div>
+
+
+            <div class="categories-grid">
+
+                <button>🍕<span>Пицца</span></button>
+                <button>🍔<span>Бургеры</span></button>
+                <button>🍣<span>Суши</span></button>
+                <button>🍜<span>Азиатская</span></button>
+                <button>🍰<span>Десерты</span></button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Меню -->
+
+    <section class="menu-section" id="menu">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>ПОПУЛЯРНОЕ</span>
+
+                <h2>
+                    Любимые блюда
+                </h2>
+
+                <p>
+                    Попробуй то, что чаще всего заказывают наши клиенты.
+                </p>
+
+            </div>
+
+
+            <div class="food-grid">
+
+
+                <!-- Пицца -->
+
+                <article class="food-card">
+
+                    <div class="food-image pizza">
+                        🍕
+                    </div>
+
+                    <div class="food-info">
+
+                        <div class="food-title">
+                            <h3>Пепперони</h3>
+                            <span>★ 4.9</span>
+                        </div>
+
+                        <p>
+                            Пицца с пепперони и моцареллой.
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <strong>
+                                2 990 ₸
+                            </strong>
+
+                            <button
+                                class="add-button"
+                                data-name="Пепперони"
+                                data-price="2990">
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Бургер -->
+
+                <article class="food-card">
+
+                    <div class="food-image burger">
+                        🍔
+                    </div>
+
+                    <div class="food-info">
+
+                        <div class="food-title">
+                            <h3>Double Burger</h3>
+                            <span>★ 4.8</span>
+                        </div>
+
+                        <p>
+                            Две котлеты, сыр и фирменный соус.
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <strong>
+                                2 490 ₸
+                            </strong>
+
+                            <button
+                                class="add-button"
+                                data-name="Double Burger"
+                                data-price="2490">
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Суши -->
+
+                <article class="food-card">
+
+                    <div class="food-image sushi">
+                        🍣
+                    </div>
+
+                    <div class="food-info">
+
+                        <div class="food-title">
+                            <h3>Sushi Mix</h3>
+                            <span>★ 4.9</span>
+                        </div>
+
+                        <p>
+                            Ассорти из популярных роллов.
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <strong>
+                                4 490 ₸
+                            </strong>
+
+                            <button
+                                class="add-button"
+                                data-name="Sushi Mix"
+                                data-price="4490">
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Лапша -->
+
+                <article class="food-card">
+
+                    <div class="food-image noodles">
+                        🍜
+                    </div>
+
+                    <div class="food-info">
+
+                        <div class="food-title">
+                            <h3>Wok с курицей</h3>
+                            <span>★ 4.7</span>
+                        </div>
+
+                        <p>
+                            Удон с курицей, овощами и терияки.
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <strong>
+                                2 190 ₸
+                            </strong>
+
+                            <button
+                                class="add-button"
+                                data-name="Wok с курицей"
+                                data-price="2190">
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- О нас -->
+
+    <section class="about" id="about">
+
+        <div class="container about-content">
+
+            <div class="about-image">
+                🛵
+            </div>
 
             <div>
 
-                <a href="#" class="logo">
-                    🍔 Food<span>Go</span>
-                </a>
+                <span class="orange">
+                    ПОЧЕМУ FOODGO?
+                </span>
+
+                <h2>
+                    Еда должна приезжать вовремя.
+                </h2>
 
                 <p>
-                    Доставляем хорошее настроение.
+                    FoodGo помогает заказать любимую еду
+                    быстро и без лишних звонков.
                 </p>
 
-            </div>
+                <div class="advantages">
 
-            <div class="footer-links">
+                    <p>✓ Быстрая доставка</p>
+                    <p>✓ Проверенные рестораны</p>
+                    <p>✓ Удобная корзина</p>
+                    <p>✓ Поддержка клиентов</p>
 
-                <a href="#home">
-                    Главная
-                </a>
-
-                <a href="#categories">
-                    Категории
-                </a>
-
-                <a href="#popular">
-                    Меню
-                </a>
-
-                <a href="#about">
-                    О нас
-                </a>
+                </div>
 
             </div>
 
         </div>
 
-        <div class="copyright">
-            © 2026 FoodGo. Все права защищены.
+    </section>
+
+</main>
+
+
+<!-- Корзина -->
+
+<div class="cart" id="cart">
+
+    <div class="cart-content">
+
+        <div class="cart-header">
+
+            <h2>
+                Корзина
+            </h2>
+
+            <button id="closeCart">
+                ×
+            </button>
+
         </div>
 
-    </footer>
+
+        <div id="cartItems">
+
+            <p class="empty">
+                Корзина пуста 🍕
+            </p>
+
+        </div>
 
 
-    <script src="script.js"></script>
+        <div class="cart-total">
+
+            <span>
+                Итого:
+            </span>
+
+            <strong id="cartTotal">
+                0 ₸
+            </strong>
+
+        </div>
+
+        <button class="button primary checkout">
+            Оформить заказ
+        </button>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    <div class="container footer-content">
+
+        <div class="logo">
+            🍔 Food<span>Go</span>
+        </div>
+
+        <p>
+            Доставляем хорошее настроение.
+        </p>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 FoodGo
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
+```
